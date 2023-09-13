@@ -1,8 +1,10 @@
 import java.awt.*;
 
-public class Circulo implements Component {
+public class Circulo implements Componente {
+
     @Override
-    public void draw() {
+    public void desenhar() {
         System.out.println("Desenhando um círculo");
+
     }
 }

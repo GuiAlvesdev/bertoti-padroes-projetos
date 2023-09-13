@@ -17,7 +17,7 @@ public class Composite implements Componente {
         System.out.println("Composição:");
 
         for (Componente component : componentes) {
-            component.desenhar();e
+            component.desenhar();
         }
     }
 
