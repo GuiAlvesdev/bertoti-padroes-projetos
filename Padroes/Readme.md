@@ -1,20 +1,8 @@
 ## Padroes de Projeto em Java
 
-<table>
-  <tr>
-    <th></th>
-    <th>Padrao Strategy</th>
-    <th>descricao</th>
-  </tr>
-  <tr>
-    <td>Anti Pattern</td>
-    <td>descricao</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+| Nome do Padrao | anti-padrão | definição do padrão | problema que ele resolve|
+|----------------|-------------|---------------------|-------------------------|
+| Strategy         | Interfaces excessivas: Criar interfaces separadas para cada variação de comportamento, mesmo que essas interfaces sejam semelhantes você criar um grande número de classes de estratégia, cada uma com apenas pequenas variações de comportamento, isso pode resultar em uma explosão de classes, tornando o código mais complexo e difícil de gerenciar         | envolve a definição de uma família de algoritmos, encapsulando cada um deles e tornando-os intercambiáveis. Ele permite que o cliente escolha o algoritmo a ser usado em tempo de execução, sem que o cliente precise conhecer os detalhes de implementação de cada algoritmo. Isso é alcançado por meio da criação de uma interface comum para todos os algoritmos e de várias classes concretas que implementam essa interface, cada uma representando um algoritmo específico.           |   útil quando você tem uma classe que possui um comportamento variável que pode ser implementado de várias maneiras diferentes. Em vez de codificar todos os algoritmos diretamente na classe cliente, você pode encapsulá-los em objetos separados e permitir que o cliente selecione qual algoritmo usar dinamicamente. Isso promove o princípio do "Open/Closed" do SOLID, que sugere que as classes devem estar abertas para extensão, mas fechadas para modificação.    | 
+| Observer       | Vazamento de Memória" ou "Memory Leak". Isso ocorre quando os observadores não são desregistrados corretamente do sujeito (observable) após terem terminado de observá-lo. Isso pode levar a um aumento gradual no uso de memória | define uma relação de um-para-muitos entre objetos, de modo que quando um objeto (chamado de "sujeito" ou "observável") muda de estado, todos os seus "observadores" (ou "assinantes") são notificados e atualizados automaticamente. Isso permite que objetos dependentes reajam a mudanças no estado de um objeto sem a necessidade de acoplamento rígido entre eles.         |   cenários em que você tem objetos que precisam reagir a mudanças em outro objeto sem criar acoplamento forte entre eles. Ele é amplamente utilizado em interfaces gráficas de usuário, sistemas de eventos, gerenciamento de notificações e muitos outros contextos. Quando você implementa o Observer Pattern, você cria uma arquitetura mais flexível e extensível, permitindo que novos observadores sejam adicionados facilmente e eliminando a necessidade de alterações no sujeito sempre que um novo comportamento for necessário. |
+| Composite       | chamado de "Complexidade Excessiva". Isso ocorre quando o padrão Composite é aplicado de maneira inadequada ou quando a estrutura hierárquica de objetos se torna excessivamente complexa,Em certos cenários, você precisaria generalizar demais a interface do componente, dificultando a compreensão. | O padrão composite compõe objetos em termos de uma estrutura em árvore para representar partes e hierarquias inteiras.A chave para o padrão composite é uma classe abstrata que representa tanto o objeto primitivo como os seus recipientes       |  O aplicativo precisa manipular uma coleção hierárquica de objetos “primitivos” e “compostos”. O processamento de um objeto primitivo é tratado de uma maneira, e o processamento de um objeto composto é tratado demaneira diferente. Ter que consultar o “tipo” de cada objeto antes de tentar processá-lo não é desejável. |
 
